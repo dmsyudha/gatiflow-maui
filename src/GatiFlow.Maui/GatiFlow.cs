@@ -196,10 +196,10 @@ public static class GatiFlowMauiExtensions
         {
 #if ANDROID
             events.AddAndroid(android => android
-                .OnCreate((activity, _) => _ = GatiFlow.StartAsync(config)));
+                .OnCreate((activity, bundle) => { _ = GatiFlow.StartAsync(config); }));
 #elif IOS || MACCATALYST
             events.AddiOS(ios => ios
-                .WillFinishLaunching((app, _) =>
+                .WillFinishLaunching((app, options) =>
                 {
                     _ = GatiFlow.StartAsync(config);
                     return true;
@@ -221,10 +221,10 @@ public static class GatiFlowMauiExtensions
         {
 #if ANDROID
             events.AddAndroid(android => android
-                .OnCreate((activity, _) => _ = GatiFlow.StartAsync()));
+                .OnCreate((activity, bundle) => { _ = GatiFlow.StartAsync(); }));
 #elif IOS || MACCATALYST
             events.AddiOS(ios => ios
-                .WillFinishLaunching((app, _) =>
+                .WillFinishLaunching((app, options) =>
                 {
                     _ = GatiFlow.StartAsync();
                     return true;

@@ -1,3 +1,4 @@
+using GatiFlow.Maui.Internal;
 using GatiFlow.Maui.Services;
 
 namespace GatiFlow.Maui.Analytics;
