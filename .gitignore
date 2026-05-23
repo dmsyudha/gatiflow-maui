@@ -1,0 +1,36 @@
+# Build output
+**/bin/
+**/obj/
+
+# NuGet packages produced by dotnet pack
+**/*.nupkg
+**/*.snupkg
+
+# NuGet restore artifacts
+**/packages/
+**/.nuget/
+
+# Visual Studio
+**/.vs/
+**/*.user
+**/*.suo
+**/*.userosscache
+**/*.sln.docstates
+
+# JetBrains Rider
+**/.idea/
+
+# Test results
+**/TestResults/
+
+# macOS
+.DS_Store
+
+# iOS / Xcode build artifacts (example app)
+example/**/DerivedData/
+example/**/*.xcarchive
+example/**/*.ipa
+
+# Android build artifacts (example app)
+example/**/*.apk
+example/**/*.aab
