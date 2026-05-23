@@ -1,4 +1,3 @@
-using GatiFlow.Maui.Internal;
 using GatiFlow.Maui.Services;
 
 namespace GatiFlow.Maui.Crashes;
@@ -10,14 +9,14 @@ public sealed class CrashesService : IGatiFlowService
 {
     public string Name => "crashes";
 
-    private GatiFlowConfig? _config;
-    private GatiFlowClient? _client;
+    private GatiFlowConfig?      _config;
+    private IGatiFlowTransport?  _client;
     private string?         _userId;
     private bool            _enabled = true;
 
     // ── IGatiFlowService ───────────────────────────────────────────────────────
 
-    Task IGatiFlowService.StartAsync(GatiFlowConfig config, GatiFlowClient client, CancellationToken ct)
+    Task IGatiFlowService.StartAsync(GatiFlowConfig config, IGatiFlowTransport client, CancellationToken ct)
     {
         _config = config;
         _client = client;

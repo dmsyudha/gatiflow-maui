@@ -1,5 +1,6 @@
 using System.Net.Http.Json;
 using System.Text.Json;
+using GatiFlow.Maui.Services;
 
 namespace GatiFlow.Maui.Internal;
 
@@ -7,7 +8,7 @@ namespace GatiFlow.Maui.Internal;
 /// Thin HTTP wrapper shared by all SDK services.
 /// Swallows all network errors — the SDK must never crash the host app.
 /// </summary>
-internal sealed class GatiFlowClient : IDisposable
+internal sealed class GatiFlowClient : IGatiFlowTransport, IDisposable
 {
     private readonly HttpClient _http;
     private readonly GatiFlowConfig _config;
@@ -34,7 +35,7 @@ internal sealed class GatiFlowClient : IDisposable
     /// <summary>
     /// POST JSON to <paramref name="path"/>. Silently no-ops on any error.
     /// </summary>
-    internal async Task PostAsync<T>(string path, T payload, CancellationToken ct = default)
+    public async Task PostAsync<T>(string path, T payload, CancellationToken ct = default)
     {
         try
         {

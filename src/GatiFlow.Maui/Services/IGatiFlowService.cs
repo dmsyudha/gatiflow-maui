@@ -9,7 +9,7 @@ public interface IGatiFlowService
     string Name { get; }
 
     /// <summary>Called once by <see cref="GatiFlow.StartAsync"/> after config is validated.</summary>
-    Task StartAsync(GatiFlowConfig config, Internal.GatiFlowClient client, CancellationToken ct = default);
+    Task StartAsync(GatiFlowConfig config, IGatiFlowTransport transport, CancellationToken ct = default);
 
     /// <summary>Called on app teardown or explicit <see cref="GatiFlow.StopAsync"/>.</summary>
     Task StopAsync(CancellationToken ct = default);

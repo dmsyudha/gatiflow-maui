@@ -3,6 +3,7 @@ using GatiFlow.Maui.Crashes;
 using GatiFlow.Maui.Internal;
 using GatiFlow.Maui.Services;
 using Microsoft.Maui.Hosting;
+using Microsoft.Maui.LifecycleEvents;
 
 namespace GatiFlow.Maui;
 
@@ -27,7 +28,7 @@ namespace GatiFlow.Maui;
 /// </summary>
 public static class GatiFlow
 {
-    private static GatiFlowClient?     _client;
+    private static GatiFlowClient?     _client;   // kept typed for Dispose()
     private static GatiFlowConfig?     _config;
     private static bool                _started;
 
