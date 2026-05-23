@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GatiFlow.Maui.Example.Views.AnalyticsPage"
+             Title="Analytics Demo">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+
+            <Label Text="GatiFlow Analytics"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Track custom events and screen views."
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Track 'button_tap' event"
+                    Clicked="OnTrackEventClicked"
+                    BackgroundColor="#4F46E5" TextColor="White"
+                    CornerRadius="10" HeightRequest="50" />
+
+            <Button Text="Track Screen View"
+                    Clicked="OnTrackScreenClicked"
+                    BackgroundColor="#4F46E5" TextColor="White"
+                    CornerRadius="10" HeightRequest="50" />
+
+            <Button Text="Track Purchase ($9.99)"
+                    Clicked="OnTrackPurchaseClicked"
+                    BackgroundColor="#4F46E5" TextColor="White"
+                    CornerRadius="10" HeightRequest="50" />
+
+            <Button Text="Set User ID"
+                    Clicked="OnSetUserIdClicked"
+                    BackgroundColor="#6366F1" TextColor="White"
+                    CornerRadius="10" HeightRequest="50" />
+
+            <Button Text="Clear User ID"
+                    Clicked="OnClearUserIdClicked"
+                    BackgroundColor="#9CA3AF" TextColor="White"
+                    CornerRadius="10" HeightRequest="50" />
+
+            <Label x:Name="StatusLabel"
+                   Text="Tap a button to send an event."
+                   FontSize="13" TextColor="Gray"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

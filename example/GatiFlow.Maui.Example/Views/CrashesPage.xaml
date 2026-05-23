@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GatiFlow.Maui.Example.Views.CrashesPage"
+             Title="Crashes Demo">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+
+            <Label Text="GatiFlow Crashes"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Report handled errors and test crash capture."
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Track Handled Exception"
+                    Clicked="OnTrackHandledClicked"
+                    BackgroundColor="#DC2626" TextColor="White"
+                    CornerRadius="10" HeightRequest="50" />
+
+            <Button Text="Track Error by Message"
+                    Clicked="OnTrackMessageClicked"
+                    BackgroundColor="#DC2626" TextColor="White"
+                    CornerRadius="10" HeightRequest="50" />
+
+            <Button Text="Track Error with Metadata"
+                    Clicked="OnTrackWithMetadataClicked"
+                    BackgroundColor="#DC2626" TextColor="White"
+                    CornerRadius="10" HeightRequest="50" />
+
+            <Label Text="⚠️ The button below throws a real unhandled exception — the SDK will capture it automatically before the app crashes."
+                   FontSize="12" TextColor="Orange"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Throw Unhandled Exception"
+                    Clicked="OnThrowUnhandledClicked"
+                    BackgroundColor="#7F1D1D" TextColor="White"
+                    CornerRadius="10" HeightRequest="50" />
+
+            <Label x:Name="StatusLabel"
+                   Text="Tap a button to report a crash."
+                   FontSize="13" TextColor="Gray"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
