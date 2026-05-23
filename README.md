@@ -198,8 +198,8 @@ Enable `SetDebugLogging(true)` during development to see SDK activity in the deb
 | Android      | API 21 (5.0)      |
 | iOS          | 13.0              |
 | Mac Catalyst | 13.1              |
-| .NET         | 8.0               |
-| .NET MAUI    | 8.0               |
+| .NET         | 9.0               |
+| .NET MAUI    | 9.0               |
 
 ---
 
